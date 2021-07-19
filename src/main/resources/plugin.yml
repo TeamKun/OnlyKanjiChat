@@ -1,4 +1,4 @@
 name: OnlyKanjiChat
 version: ${project.version}
-main: net.kunmc.llab.onlykanjichat.Onlykanjichat
+main: net.kunmc.llab.onlykanjichat.OnlyKanjiChat
 api-version: 1.16
