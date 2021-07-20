@@ -5,7 +5,6 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.event.player.PlayerCommandPreprocessEvent;
-import org.bukkit.event.player.PlayerCommandSendEvent;
 
 
 public class ChatEvent implements Listener {
@@ -29,7 +28,7 @@ public class ChatEvent implements Listener {
     }
 
     /**
-     * tellコマンド
+     * tell,w,msgコマンド
      * */
     @EventHandler(ignoreCancelled = true)
     public void onPlayerCommandPreprocess(PlayerCommandPreprocessEvent event) {
@@ -38,8 +37,15 @@ public class ChatEvent implements Listener {
         /** コマンド */
         String command = commands[0];
 
-        // tellコマンドであるか判定
-        if (!command.equalsIgnoreCase("/tell")) {
+        // tell,w,msgコマンドであるか判定
+        if (!command.equalsIgnoreCase("/tell") &&
+                !command.equalsIgnoreCase("/w") &&
+                !command.equalsIgnoreCase("/msg")) {
+            return;
+        }
+
+        // 引数チェック
+        if (commands.length < 3) {
             return;
         }
 
@@ -47,7 +53,11 @@ public class ChatEvent implements Listener {
         String target = commands[1];
 
         /** チャット */
-        String chat = commands[2];
+        String chat = "";
+
+        for (int i = 2; i < commands.length; i++) {
+            chat += commands[i];
+        }
 
         // チャットから漢字のみを抽出
         String extractResult = KanjiExtractor.extractKanji(chat);
