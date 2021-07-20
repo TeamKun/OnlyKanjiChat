@@ -21,7 +21,12 @@ public class AnvilUseEvent implements Listener {
 
         // インベントリが金床か判定
         Inventory inventory = event.getInventory();
-        if(!(inventory instanceof AnvilInventory)) {
+        if (!(inventory instanceof AnvilInventory)) {
+            return;
+        }
+
+        // インベントリスロットの位置を判定
+        if (event.getRawSlot() != 2) {
             return;
         }
 
@@ -45,6 +50,9 @@ public class AnvilUseEvent implements Listener {
         // 名前から漢字を抽出
         String extractResult = KanjiExtractor.extractKanji(renameText);
 
+        if (extractResult.length() == 0) {
+            extractResult = "否漢字以外命名";
+        }
         // 抽出後の名前をセット
         itemMeta.displayName(Component.text(extractResult));
         item.setItemMeta(itemMeta);
