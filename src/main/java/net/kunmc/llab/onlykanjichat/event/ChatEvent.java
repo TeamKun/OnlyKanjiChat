@@ -70,7 +70,7 @@ public class ChatEvent implements Listener {
             event.setCancelled(true);
         }
 
-        // 返還後の文字列をtell
+        // 変換後の文字列をtell
         event.setMessage(command + " " + target + " " + extractResult);
     }
 }
