@@ -19,6 +19,7 @@ public class ChatEvent implements Listener {
 
         // 抽出結果が0文字
         if (extractResult.length() == 0) {
+            event.getPlayer().sendMessage("§c漢字が含まれていないため発言できません");
             // イベントをキャンセル
             event.setCancelled(true);
         }
