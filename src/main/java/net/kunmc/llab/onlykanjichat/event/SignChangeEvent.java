@@ -4,8 +4,6 @@ import net.kunmc.llab.onlykanjichat.logic.KanjiExtractor;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 
-import java.util.Arrays;
-
 public class SignChangeEvent implements Listener {
     @EventHandler(ignoreCancelled = true)
     public void onSignChange(org.bukkit.event.block.SignChangeEvent event) {

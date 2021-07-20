@@ -1,12 +1,9 @@
 package net.kunmc.llab.onlykanjichat.event;
 
-import io.papermc.paper.event.player.AsyncChatEvent;
 import net.kunmc.llab.onlykanjichat.logic.KanjiExtractor;
-import net.kyori.adventure.text.Component;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
-import org.bukkit.event.player.PlayerChatEvent;
 
 public class ChatEvent implements Listener {
     @EventHandler(ignoreCancelled = true)
