@@ -19,7 +19,7 @@ public class ChatEvent implements Listener {
 
         // 抽出結果が0文字
         if (extractResult.length() == 0) {
-            event.getPlayer().sendMessage("§c漢字が含まれていないため発言できません");
+            event.getPlayer().sendMessage("§c非含漢字故御前不可喋");
             // イベントをキャンセル
             event.setCancelled(true);
         }
@@ -65,7 +65,7 @@ public class ChatEvent implements Listener {
 
         // 抽出結果が0文字
         if (extractResult.length() == 0) {
-            event.getPlayer().sendMessage("§c漢字が含まれていないためささやけません");
+            event.getPlayer().sendMessage("§c非含漢字故御前不可囁");
             // イベントをキャンセル
             event.setCancelled(true);
         }
