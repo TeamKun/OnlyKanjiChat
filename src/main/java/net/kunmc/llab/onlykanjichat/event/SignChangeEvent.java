@@ -5,6 +5,9 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 
 public class SignChangeEvent implements Listener {
+    /**
+     * 看板入力
+     * */
     @EventHandler(ignoreCancelled = true)
     public void onSignChange(org.bukkit.event.block.SignChangeEvent event) {
 
