@@ -1,8 +1,8 @@
-package net.kunmc.llab.onlykanjichat;
+package net.kunmc.lab.onlykanjichat;
 
-import net.kunmc.llab.onlykanjichat.event.AnvilUseEvent;
-import net.kunmc.llab.onlykanjichat.event.ChatEvent;
-import net.kunmc.llab.onlykanjichat.event.SignChangeEvent;
+import net.kunmc.lab.onlykanjichat.event.AnvilUseEvent;
+import net.kunmc.lab.onlykanjichat.event.ChatEvent;
+import net.kunmc.lab.onlykanjichat.event.SignChangeEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class OnlyKanjiChat extends JavaPlugin {

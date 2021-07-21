@@ -1,4 +1,4 @@
-package net.kunmc.llab.onlykanjichat.logic;
+package net.kunmc.lab.onlykanjichat.logic;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

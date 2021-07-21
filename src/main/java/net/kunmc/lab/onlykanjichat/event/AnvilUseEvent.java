@@ -1,6 +1,6 @@
-package net.kunmc.llab.onlykanjichat.event;
+package net.kunmc.lab.onlykanjichat.event;
 
-import net.kunmc.llab.onlykanjichat.logic.KanjiExtractor;
+import net.kunmc.lab.onlykanjichat.logic.KanjiExtractor;
 import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
